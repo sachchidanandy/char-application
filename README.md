@@ -1,1 +1,1 @@
-# char-application
+# char-application-client
