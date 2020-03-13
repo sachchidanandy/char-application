@@ -1,0 +1,40 @@
+.joinOuterContainer {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.joinInnerContainer {
+    width: 20%;
+}
+
+.heading {
+    color: whitesmoke;
+    font-size: 2.5em;
+    padding-bottom: 10px;
+    border-bottom: 2px solid whitesmoke;
+}
+
+.joinInput {
+    border-radius: 5px;
+    width: 100%;
+    padding: 15px 20px;
+}
+
+.mt-20 {
+   margin-top: 20px;
+}
+
+.button {
+    color: whitesmoke;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: blueviolet;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    width: 100px;
+    cursor: pointer;
+}
