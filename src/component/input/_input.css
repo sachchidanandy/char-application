@@ -1,0 +1,20 @@
+.form {
+    margin-top: auto;
+    word-break: break-all;
+}
+
+.input {
+    width: 88%;
+    height: 4vh;
+    padding-left: 8px;
+}
+
+.sendButton {
+    width: 9%;
+    margin-left: 4px;
+    min-height: 5vh;
+    border: 0px;
+    background: steelblue;
+    border-radius: 4px;
+    color: whitesmoke;
+}

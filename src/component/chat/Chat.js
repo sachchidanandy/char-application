@@ -8,9 +8,12 @@
 import React, { useEffect, useState } from 'react';
 import queryString from 'query-string';
 import io from 'socket.io-client';
-import { Redirect } from 'react-router-dom';
 
 import { ENDPOINT } from '../../config';
+import './_chat.css';
+import InfoBar from '../info_bar/InfoBar';
+import Input from '../input/Input';
+import Messages from '../messages/Messages';
 
 let socket;
 
@@ -54,20 +57,18 @@ const Chat = ({ location, history }) => {
 
     const sendMessage = event => {
         event.preventDefault();
-        if (messageToSend) socket.emit('sendMessage', messageToSend, () => setMessageToSend(''));
+        if (messageToSend.trim()) socket.emit('sendMessage', messageToSend.trim(), () => setMessageToSend(''));
     };
 
-    console.log(messages, messageToSend);
     return (
         <div className='chatOuterContainer'>
-            <h1>
-                This is Chat Page
-            </h1>
             <div className='chatInnerContainer'>
-                <input
-                    value={messageToSend}
-                    onChange={ event => setMessageToSend(event.target.value) }
-                    onKeyPressCapture={ event => event.key === 'Enter' ? sendMessage(event) : null }
+                <InfoBar room={room}/>
+                <Messages messages={messages} name={name}/>
+                <Input
+                    messageToSend={messageToSend}
+                    setMessageToSend={setMessageToSend}
+                    sendMessage={sendMessage}
                 />
             </div>
         </div>
