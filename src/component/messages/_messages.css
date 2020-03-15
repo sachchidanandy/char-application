@@ -1,5 +1,14 @@
 .messages {
-    padding: 5% 0;
-    overflow: auto;
-    flex: auto;
+    padding: 12px 0;
+    height: 75vh;
+}
+
+.buttonToScrol {
+    background-image: url('../../icons/downArrow.png');
+    background-color: #cccccc; /* Used if the image is unavailable */
+    height: 20px; /* You must set a specified height */
+    width: 20px; /* You must set a specified width */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
 }

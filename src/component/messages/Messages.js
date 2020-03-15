@@ -9,11 +9,13 @@ import React from 'react';
 import ScrollToBottom from 'react-scroll-to-bottom';
 
 import MessageDialog from '../message_dialog/MessageDialog';
+import './_messages.css';
 
 const Messages = ({ messages, name }) => (
-    <ScrollToBottom className='messages'>
+    <ScrollToBottom className='messages' followButtonClassName='buttonToScrol'>
         {
-            messages.map(message => <MessageDialog message={message} name={name}/>)
+            messages.map((message, index) => <MessageDialog
+                key={index} message={message} name={name}/>)
         }
     </ScrollToBottom>
 );

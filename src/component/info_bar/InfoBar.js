@@ -14,11 +14,11 @@ import closeIcon from '../../icons/closeIcon.png';
 const InfoBar = ({ room }) => (
     <div className='infoBar'>
         <div className='leftInnerContainer'>
-            <img className='onlineIcon' src={onlineIcon} alt='online Image'/>
+            <img className='onlineIcon' src={onlineIcon} alt='online'/>
             <h3>{room}</h3>
         </div>
         <div className='rightInnerContainer'>
-            <a href='/'> <img className='onlineIcon' src={closeIcon} alt='close Image'/> </a>
+            <a href='/'> <img className='onlineIcon' src={closeIcon} alt='close'/> </a>
         </div>
     </div>
 );
