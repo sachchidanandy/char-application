@@ -5,4 +5,4 @@
  * @author SachchidanandY
 */
 
-export const ENDPOINT = process.env.REACT_APP_ENDPOINT ;
+export const ENDPOINT = process.env.NODE_ENV === 'production' ? 'https://meeting-room-chat.herokuapp.com/' : 'http://localhost:5000/';
